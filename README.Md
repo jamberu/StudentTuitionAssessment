@@ -1,4 +1,4 @@
-# Student Tuition Assessment Fee
+# Student Tuition Assessment
 A program that assesses the total tuition cost of a student.
 
 ### Additional Features
