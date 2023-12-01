@@ -21,28 +21,24 @@ A program that assesses the total tuition cost of a student.
 
 ### Developers
 
+
+#### Ayerdi, Johannes Dan
 <img src = devs/Johannes.jpg title = "Johannes" width = "100" height = "100" alt="Johannes">
 <br>
 
-#### Ayerdi, Johannes Dan
-
+#### De Leon, Rafael
 <img src = devs/Rafael.jpg title = "Johannes" width = "100" height = "100" alt = "Rafael">
 <br>
 
-#### De Leon, Rafael
-
+#### de Guzman, Karell Jane
 <img src = devs/Karell.jpg title = "Karell" width = "100" height = "100" alt = "Karell">
 <br>
 
-#### de Guzman, Karell Jane
-
+#### Flores, Janver
 <img src = devs/Janver.jpg title = "Johannes" width = "100" height = "100" alt = "Janver">
 <br>
 
-#### Flores, Janver
-
+#### Pascual, Raiza
 <img src = devs/Raiza.jpg title = "Raiza" width = "100" height = "100" alt = "Raiza">
 <br>
-
-#### Pascual, Raiza
 
