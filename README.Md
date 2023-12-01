@@ -29,12 +29,12 @@ A program that assesses the total tuition cost of a student.
 <img src = devs/Rafael.jpg title = "Johannes" width = "100" height = "100" alt = "Rafael">
 <br>
 
+#### De Leon, Rafael
+
 <img src = devs/Karell.jpg title = "Karell" width = "100" height = "100" alt = "Karell">
 <br>
 
 #### de Guzman, Karell Jane
-
-#### De Leon, Rafael
 
 <img src = devs/Janver.jpg title = "Johannes" width = "100" height = "100" alt = "Janver">
 <br>
