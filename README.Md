@@ -3,6 +3,8 @@ A program that assesses the total tuition cost of a student.
 
 ### Additional Features
 - Verification System (as per instructions)
+- Cooldown for Password Lock
+- Loading Animation
 - Student Name Input
 - Student ID Input
 
@@ -13,7 +15,7 @@ A program that assesses the total tuition cost of a student.
 ### Screenshots
 
 - #### [Verification System Splash Screen](tests/Starting.jpg?raw=true)
-- #### [Wrong Password 3x for Verification](tests/WrongPassword.jpg?raw=true)
+- #### [Wrong Password Lock + Countdown](tests/Countdown.gif)
 - #### [Full Scholar Test Run](tests/FullScholarTest.jpg?raw=true)
 - #### [Half Scholar Test Run](tests/HalfScholarTest.jpg?raw=true)
 - #### [Cash Payment Test Run](tests/NonScholarCashTest.jpg?raw=true)
