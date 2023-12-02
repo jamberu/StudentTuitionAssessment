@@ -1,18 +1,44 @@
 import java.util.Scanner;
 import static java.lang.Math.floor;
+import static java.lang.Math.round;
 
 class Verification {
     // A simple verification tasked by the project instruction
     static int defaultPassword = 1234;
-   public static void verify() {
+
+    public static void loadingAnimation() throws InterruptedException {
+        // Loading animation for better interface
+        char[] frames = {'-', '\\', '|', '/'};
+
+        for (int index = 0; index < 11; index++) {
+            System.out.printf("%c\r", frames[index % frames.length]);
+            Thread.sleep(500);
+        }
+    }
+    public static void coolDown(long coolDown) throws InterruptedException {
+        // Cooldown method for error password input
+        for (; coolDown >= 0; coolDown -= 1000) {
+            System.out.printf("You have been blocked from using the system! (%s)\r", formatMilliseconds(coolDown));
+            Thread.sleep(1000);
+        }
+    }
+    public static String formatMilliseconds(long milliseconds) {
+        // Millisecond formatter for the cooldown method
+        long seconds = (milliseconds / 1000) % 60;
+        long minutes = (milliseconds / (1000 * 60)) % 60;
+
+        return String.format("%02d:%02d", minutes, seconds);
+    }
+    public static void verify() throws InterruptedException {
        int retries = 0;
+       int coolDown = 60000;
        Scanner entry = new Scanner(System.in);
 
        System.out.print("\tVERIFICATION");
        while (true) {
            if (retries == 3) {
-               System.out.println("You have been blocked from using the system!");
-               System.exit(1);
+                coolDown(coolDown);
+               retries = 0;
            }
            else {
                System.out.print("\nEnter the password: ");
@@ -25,6 +51,13 @@ class Verification {
                }
 
                else {
+                   try {
+                       loadingAnimation();
+                   }
+                   catch (InterruptedException e) {
+                       System.exit(1);
+                   }
+
                    System.out.print("You have proven yourself.\n");
                    break;
                }
@@ -113,7 +146,7 @@ class Compute {
         }
         else {
             if (student.paymentMethod.type.equalsIgnoreCase("Cash"))
-                tuition = student.tuition - (student.tuition* cashDiscount);
+                tuition = round(student.tuition - (student.tuition* cashDiscount));
             else
                 tuition = student.tuition + (student.tuition * installmentRate);
         }
@@ -124,12 +157,17 @@ class Compute {
 
 public class Main {
     public static void main(String[] args) {
-        Verification.verify();
+        try {
+            Verification.verify();
+        }
+        catch (InterruptedException e) {
+            System.exit(1);
+        }
+
         Scanner entry = new Scanner(System.in);
         Student student;
 
         while (true) {
-            Console.welcomeScreen();
             System.out.print("\nEnter your choice: ");
             int proceed = entry.nextInt();
 
@@ -139,11 +177,13 @@ public class Main {
             }
             else {
                 entry.nextLine();
-                System.out.print("\nEnter your name: ");
+                System.out.print("\nEnter your name: \r");
                 String name = entry.nextLine();
-                System.out.print("\nEnter your ID: ");
+
+                System.out.print("\nEnter your ID: \r");
                 int ID = entry.nextInt();
-                System.out.print("\nEnter your tuition: ");
+
+                System.out.print("\nEnter your tuition: \r");
                 double tuition = entry.nextDouble();
 
                 Console.scholarshipSchemeScreen();
