@@ -7,12 +7,12 @@ class Verification {
     static int defaultPassword = 1234;
 
     public static void loadingAnimation() throws InterruptedException {
-        // Loading animation for better interface
-        char[] frames = {'-', '\\', '|', '/'};
+        // Loading animation (progress bar) for better interface
+        String bar = "▆";
 
-        for (int index = 0; index < 11; index++) {
-            System.out.printf("%c\r", frames[index % frames.length]);
-            Thread.sleep(500);
+        for (int index = 0; index <= 20; index++) {
+            System.out.printf("[%s%s] %s%%\r", bar.repeat(index), " ".repeat(20 - index), index * 5);
+            Thread.sleep(250);
         }
     }
     public static void coolDown(long coolDown) throws InterruptedException {
@@ -128,6 +128,7 @@ class Student {
     }
 }
 class Compute {
+    // Wrapper class for computing the tuition fee of the student
     Student student;
     float fullScholarDiscount =  (float) 90 / 100; // Converting percentage to decimal
     float halfScholarDiscount =  (float) 50 / 100; // Converting percentage to decimal
@@ -168,6 +169,9 @@ public class Main {
         Student student;
 
         while (true) {
+
+            Console.welcomeScreen();
+
             System.out.print("\nEnter your choice: ");
             int proceed = entry.nextInt();
 
