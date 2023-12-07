@@ -21,15 +21,10 @@ and their payment scheme.
 
 ### Screenshots
 
-- #### [Verification System Splash Screen](tests/Starting.jpg?raw=true)
-- #### [Wrong Password Lock + Countdown](tests/Countdown.gif)
-- #### [Full Scholar Test Run](tests/FullScholarTest.jpg?raw=true)
-- #### [Half Scholar Test Run](tests/HalfScholarTest.jpg?raw=true)
-- #### [Cash Payment Test Run](tests/NonScholarCashTest.jpg?raw=true)
-- #### [Installment Payment Test Run](tests/NonScholarInstallmentTest.jpg?raw=true)
+- #### [Test Screenshots](tests)
+- #### [Working Environment](shots)
 
 ### Developers
-
 
 - #### Ayerdi, Johannes Dan
 <img src = devs/Johannes.jpg title = "Johannes" width = "100" height = "100" alt="Johannes">
